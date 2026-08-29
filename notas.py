@@ -188,7 +188,7 @@ def _imprimir_nota(nota):
 
 def mostrar_menu():
     print("\n ")
-    print("  SISTEMA DE GESTIÓN DE NOTAS PERSONALES")
+    print("SISTEMA DE GESTIÓN DE NOTAS PERSONALES")
     print("\n ")
     print("1. Agregar nota")
     print("2. Editar nota")
