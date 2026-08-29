@@ -14,11 +14,6 @@ ARCHIVO_NOTAS = "notas.json"
 
 
 def cargar_notas():
-    """Carga las notas desde el archivo JSON.
-
-    Maneja el caso de archivo inexistente y de archivo corrupto/ilegible,
-    devolviendo siempre una lista utilizable para el resto del programa.
-    """
     if not os.path.exists(ARCHIVO_NOTAS):
         print(f"¡No se encontró !'{ARCHIVO_NOTAS}'. Se creará uno nuevo al agregar la primera nota.")
         return []
@@ -38,7 +33,6 @@ def cargar_notas():
 
 
 def guardar_notas(notas):
-    """Guarda la lista completa de notas en el archivo JSON."""
     try:
         with open(ARCHIVO_NOTAS, "w", encoding="utf-8") as archivo:
             json.dump(notas, archivo, indent=4, ensure_ascii=False)
@@ -47,14 +41,12 @@ def guardar_notas(notas):
 
 
 def generar_id(notas):
-    """Genera un ID entero único e incremental para una nueva nota."""
     if not notas:
         return 1
     return max(nota["id"] for nota in notas) + 1
 
 
 def agregar_nota(notas):
-    """Solicita los datos de una nota nueva, la valida y la guarda."""
     print("\n--- Agregar Nueva Nota ---")
 
     titulo = input("Título: ").strip()
@@ -85,7 +77,6 @@ def agregar_nota(notas):
 
 
 def listar_notas(notas):
-    """Muestra todas las notas guardadas."""
     print("\n--- Listado de Notas ---")
     if not notas:
         print("No hay notas guardadas todavía.")
@@ -96,8 +87,7 @@ def listar_notas(notas):
 
 
 def buscar_notas(notas):
-    """Busca notas cuyo título, contenido o categoría contenga el término dado."""
-    print("\n--- Buscar Notas ---")
+    print("\n    Buscar Notas    ")
     if not notas:
         print("No hay notas guardadas todavía.")
         return
@@ -124,8 +114,7 @@ def buscar_notas(notas):
 
 
 def editar_nota(notas):
-    """Permite modificar el título, contenido o categoría de una nota existente."""
-    print("\n--- Editar Nota ---")
+    print("\n    Editar Nota    ")
     if not notas:
         print("No hay notas guardadas todavía.")
         return
@@ -159,8 +148,7 @@ def editar_nota(notas):
 
 
 def eliminar_nota(notas):
-    """Elimina una nota existente, previa confirmación del usuario."""
-    print("\n--- Eliminar Nota ---")
+    print("\n    Eliminar Nota    ")
     if not notas:
         print("No hay notas guardadas todavía.")
         return
@@ -187,30 +175,28 @@ def eliminar_nota(notas):
 
 
 def _buscar_por_id(notas, id_nota):
-    """Devuelve la nota con el ID indicado, o None si no existe."""
     return next((nota for nota in notas if nota["id"] == id_nota), None)
 
 
 def _imprimir_nota(nota):
-    """Imprime una nota de forma legible."""
     print(f"\nID: {nota['id']}")
     print(f"Título: {nota['titulo']}")
     print(f"Categoría: {nota['categoria']}")
     print(f"Fecha de creación: {nota['fecha_creacion']}")
     print(f"Contenido: {nota['contenido']}")
-    print("-" * 40)
+    print("\n ")
 
 def mostrar_menu():
-    print("\n" + "=" * 45)
+    print("\n ")
     print("  SISTEMA DE GESTIÓN DE NOTAS PERSONALES")
-    print("=" * 45)
+    print("\n ")
     print("1. Agregar nota")
     print("2. Editar nota")
     print("3. Eliminar nota")
     print("4. Listar notas")
     print("5. Buscar nota")
     print("6. Salir")
-    print("=" * 45)
+    print("\n ")
 
 
 def main():
@@ -231,7 +217,7 @@ def main():
         elif opcion == "5":
             buscar_notas(notas)
         elif opcion == "6":
-            print("\n¡Gracias por usar el sistema de notas! Hasta pronto.")
+            print("\n¡Gracias por usar el sistema de notas! Hasta pronto!")
             break
         else:
             print("Opción no válida. Por favor selecciona un número del 1 al 6.")
