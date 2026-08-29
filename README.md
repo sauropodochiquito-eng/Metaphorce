@@ -50,7 +50,7 @@ Ejemplo:
 ```
 Elige una opcion (1-6): 1
 
---- Agregar nota ---
+    Agregar nota    
 Titulo: Reunion de equipo
 Contenido: Preparar el informe antes del viernes
 Categoria (Trabajo, Personal, Estudio...): Trabajo
@@ -76,7 +76,6 @@ Titulo: Reunion de equipo
 Categoria: Trabajo
 Fecha: 2026-08-28 10:15:00
 Contenido: Preparar el informe antes del viernes
-----------------------------------------
 ```
 
 ## Como se guardan los datos
