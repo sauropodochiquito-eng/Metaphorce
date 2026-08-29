@@ -8,7 +8,7 @@ Python 3.8 o superior. No usa librerias externas, solo las que ya vienen con Pyt
 
 ## Archivos del proyecto
 
-- notas.py: el programa
+- notas.py: el programa 
 - notas.json: donde se guardan las notas
 - README.md: este archivo
 
