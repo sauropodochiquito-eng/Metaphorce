@@ -29,16 +29,16 @@ python3 notas.py
 Al correr el programa aparece un menu:
 
 ```
-==============================
-  GESTION DE NOTAS PERSONALES
-==============================
+
+SISTEMA DE GESTION DE NOTAS PERSONALES
+
 1. Agregar nota
 2. Editar nota
 3. Eliminar nota
 4. Listar notas
 5. Buscar nota
 6. Salir
-==============================
+
 Elige una opcion (1-6):
 ```
 
@@ -104,16 +104,7 @@ Si notas.json no existe todavia, el programa lo crea solo cuando agregas la prim
 - Si el titulo o contenido de una nota nueva estan vacios, se cancela y no se guarda nada.
 - Si al editar o eliminar el ID no existe o no es un numero, se avisa y no pasa nada.
 
-## Subir el proyecto a GitHub
-
-```
-git init
-git add .
-git commit -m "Proyecto final: sistema de notas"
-git remote add origin URL_DEL_REPOSITORIO
-git push -u origin main
-```
 
 ## Autor
 
-Tu nombre aqui
+Claudio Alessandro Juárez López
