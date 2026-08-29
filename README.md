@@ -2,10 +2,6 @@
 
 Programa de consola en Python para crear, editar, eliminar, listar y buscar notas personales. Las notas se guardan en un archivo JSON para que no se pierdan al cerrar el programa.
 
-## Requisitos
-
-Python 3.8 o superior. No usa librerias externas, solo las que ya vienen con Python (json, os, datetime).
-
 ## Archivos del proyecto
 
 - notas.py: el programa 
@@ -18,15 +14,9 @@ Python 3.8 o superior. No usa librerias externas, solo las que ya vienen con Pyt
 python notas.py
 ```
 
-Si eso no funciona (por ejemplo en Mac o Linux), probar con:
-
-```
-python3 notas.py
-```
-
 ## Como se usa
 
-Al correr el programa aparece un menu:
+Al correr el programa aparece un menú:
 
 ```
 
